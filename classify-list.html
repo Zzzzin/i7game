@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head lang="cn">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="copyright" content="www.i7game.com">
+    <meta name="keywords" content="手游,HTML5游戏,HTML5GAME,i7game,mobile,html5">
+
+    <title>i7Game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="256x256" href="i7game.ico">
+
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+    <link rel="stylesheet" href="style/index.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+        function FontSize() {
+            var deviceWidth = document.documentElement.clientWidth > 1024 ? 640 : document.documentElement.clientWidth;
+            //按照640像素下字体为100px的标准来，得到一个字体缩放比例值 6.4
+            document.documentElement.style.fontSize = (deviceWidth / 6.4) + 'px';
+        }
+        FontSize();
+        $(window).on('resize', FontSize);
+    </script>
+</head>
+<body>
+<div class="w">
+    <!--头部分类-->
+    <div class="title fixed">
+        <button class="left-back"><i class="icon-left"></i></button>
+        <span>益智休闲</span>
+        <select class="select" name="">
+            <option value="">不限</option>
+            <option value="">&lt;10M</option>
+            <option value="">10M-50M</option>
+            <option value="">50M-100M</option>
+            <option value="">&gt;100M</option>
+        </select>
+    </div>
+    <div class="titleGap"></div>
+
+    <!--游戏分类导航-->
+    <nav>
+        <div class="classify-tab" id="swiper-container2">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a href="javascript:;">全部</a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="javascript:;">益智</a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="javascript:;" class="current">卡通</a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="javascript:;">减压</a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="javascript:;">消除</a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="javascript:;">解谜</a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="javascript:;">捕鱼</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!--推荐 单条游戏-->
+    <div class="">
+        <ul class="game-list">
+            <li class="news">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="hot">
+                <a href="javascrip:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺
+                            <span class="mark-libao">礼包</span>
+                        </h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="sutra">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="first">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="news">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
+
+<script src="js/slides.min.jquery.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<!--游戏图片懒加载 淡入-->
+<script>
+    $("img").lazyload({
+        threshold: 1000,
+        effect: "fadeIn"
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        <!--游戏分类 滑动栏-->
+        new Swiper('#swiper-container2', {
+            slidesPerView: 'auto',
+            paginationClickable: true
+        });
+
+        // 页面跳转时如果有锚点值
+        (function () {
+            if (window.location.hash) {
+                var ulswiper2 = $("#swiper-container2 .swiper-wrapper").eq(0);
+                var windowHash = window.location.hash;
+                var hashId = $("#swiper-container2 .swiper-wrapper")[0].querySelector(windowHash) || false;
+
+                if (hashId) {   // hash 在 swiper2 内；
+                    var hashLeft = $(hashId).position().left; // 锚点距离左边的距离
+                    var swiper2Width = (function () {
+                        var len = $("#swiper-container2 li").length;
+                        var some = 0;
+                        for (var i = 0; i < len; i++) {
+                            some += $("#swiper-container2 li").eq(i).innerWidth();
+                        }
+                        return some;
+                    })();
+                    // 如果为最后一个时
+                    if (hashLeft >= swiper2Width - $(".w")[0].offsetWidth) {
+                        hashLeft = swiper2Width - $(".w")[0].offsetWidth;
+                    }
+                    ulswiper2.css("transform", "translateX(-" + hashLeft + "px)");
+                    $(windowHash).addClass("current").siblings("li").removeClass("current"); // 添加选中样式
+
+                }
+            }
+        })()
+
+    })
+</script>
+

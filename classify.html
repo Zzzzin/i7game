@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head lang="cn">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="copyright" content="www.i7game.com">
+    <meta name="keywords" content="手游,HTML5游戏,HTML5GAME,i7game,mobile,html5">
+
+    <title>i7Game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="256x256" href="i7game.ico">
+
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/index.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+        function FontSize() {
+            var deviceWidth = document.documentElement.clientWidth > 1024 ? 640 : document.documentElement.clientWidth;
+            //按照640像素下字体为100px的标准来，得到一个字体缩放比例值 6.4
+            document.documentElement.style.fontSize = (deviceWidth / 6.4) + 'px';
+        }
+        FontSize();
+        $(window).on('resize', FontSize);
+    </script>
+</head>
+<body>
+<div class="w ">
+    <!--头部固定-->
+    <header class="head fixed">
+        <a href="javascript:;" class="btn-side-open"><i>爱轻游</i></a>
+        <span class="btn-logo"></span>
+
+        <div class="btn-search-box">
+            <a href="javascript:;" class="btn-search"><i class="icon-search"></i>极品贪吃蛇</a>
+        </div>
+    </header>
+    <div class="headGap"></div>
+
+    <!--游戏大小包大小 选择-->
+    <div style="padding: 0.1rem;">
+        <div class="choose-game-size">
+            <ul class="clearfix">
+                <li>
+                    <a href="javascript:;">
+                        <div class="img"></div>
+                        <div class="txt black">&lt;10M</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="img small"></div>
+                        <div class="txt black">10M-50M</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="img middle"></div>
+                        <div class="txt black">50M-100M</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="img large"></div>
+                        <div class="txt black">&gt;100M</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:;">
+                        <div class="img boy"></div>
+                        <div class="txt black">男生最爱</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="img girl"></div>
+                        <div class="txt black">女生最爱</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="img html"></div>
+                        <div class="txt black">在线游戏</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="img good"></div>
+                        <div class="txt black">推荐单机</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="classify MarginTopGap">
+            <!--休闲益智-->
+            <div class="classify-box clearfix">
+                <div class="classify-innerL f_left">
+                    <a href="javascript:;">
+                        <span class="img smile"></span>
+                        <i class="icon-right"></i>
+                        <div class="txt" style="color: #F7740C;">益智休闲</div>
+                    </a>
+                </div>
+                <ul class="classify-innerR f_right">
+                    <li>
+                        <a href="javascript:;">益智</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">卡通</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="current">减压</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">消除</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">解谜</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">捕鱼</a>
+                    </li>
+                </ul>
+            </div>
+            <!--射击飞行-->
+            <div class="classify-box clearfix">
+                <div class="classify-innerL f_left">
+                    <a href="javascript:;">
+                        <span class="img fly"></span>
+                        <i class="icon-right"></i>
+                        <div class="txt" style="color: #2091F8;">射击飞行</div>
+                    </a>
+                </div>
+                <ul class="classify-innerR f_right">
+                    <li>
+                        <a href="javascript:;">射击</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">狙击</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">飞机</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="current">坦克</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">抢滩</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">空战</a>
+                    </li>
+                </ul>
+            </div>
+            <!--酷跑赛车-->
+            <div class="classify-box clearfix">
+                <div class="classify-innerL f_left">
+                    <a href="javascript:;">
+                        <span class="img car"></span>
+                        <i class="icon-right"></i>
+                        <div class="txt" style="color: #FF1200;">酷跑赛车</div>
+                    </a>
+                </div>
+                <ul class="classify-innerR f_right">
+                    <li>
+                        <a href="javascript:;" class="current">摩托</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">赛车</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">横屏跑酷</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">竖屏跑酷</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">飞车</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">飙车</a>
+                    </li>
+                </ul>
+            </div>
+            <!--体育竞技-->
+            <div class="classify-box clearfix">
+                <div class="classify-innerL f_left">
+                    <a href="javascript:;">
+                        <span class="img ball"></span>
+                        <i class="icon-right"></i>
+                        <div class="txt" style="color: #76D900;">体育竞技</div>
+                    </a>
+                </div>
+                <ul class="classify-innerR f_right">
+                    <li>
+                        <a href="javascript:;" class="current">篮球</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">赛车</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">足球</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">台球</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">NBA</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">FIFA</a>
+                    </li>
+                </ul>
+            </div>
+            <!--棋牌麻将-->
+            <div class="classify-box clearfix">
+                <div class="classify-innerL f_left">
+                    <a href="javascript:;">
+                        <span class="img card"></span>
+                        <i class="icon-right"></i>
+                        <div class="txt" style="color: #76D900;">棋牌麻将</div>
+                    </a>
+                </div>
+                <ul class="classify-innerR f_right">
+                    <li>
+                        <a href="javascript:;" class="current">纸牌</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">棋类</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">麻将</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">斗地主</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">地方特色</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">桌游</a>
+                    </li>
+                </ul>
+            </div>
+            <!--动作冒险-->
+            <div class="classify-box clearfix">
+                <div class="classify-innerL f_left">
+                    <a href="javascript:;">
+                        <span class="img sword"></span>
+                        <i class="icon-right"></i>
+                        <div class="txt" style="color: #E61290;">动作冒险</div>
+                    </a>
+                </div>
+                <ul class="classify-innerR f_right">
+                    <li>
+                        <a href="javascript:;" class="current">格斗</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">冒险</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">街机</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">动作闯关</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">模拟器</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">热血</a>
+                    </li>
+                </ul>
+            </div>
+            <!--策略经营-->
+            <div class="classify-box clearfix">
+                <div class="classify-innerL f_left">
+                    <a href="javascript:;">
+                        <span class="img house"></span>
+                        <i class="icon-right"></i>
+                        <div class="txt" style="color: #080BCB;">策略经营</div>
+                    </a>
+                </div>
+                <ul class="classify-innerR f_right">
+                    <li>
+                        <a href="javascript:;" class="current">经营</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">养成</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">历史</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">农场</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">塔防</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">战争</a>
+                    </li>
+                </ul>
+            </div>
+            <!--角色扮演-->
+            <div class="classify-box clearfix">
+                <div class="classify-innerL f_left">
+                    <a href="javascript:;">
+                        <span class="img face"></span>
+                        <i class="icon-right"></i>
+                        <div class="txt" style="color: #D201FF;">策略经营</div>
+                    </a>
+                </div>
+                <ul class="classify-innerR f_right">
+                    <li>
+                        <a href="javascript:;" class="current">动漫</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">魔幻</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">武侠</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">回合制</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">即时战斗</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-borderB">玄幻</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!--底部固定-->
+    <div class="footGap"></div>
+    <div class="foot w">
+        <ul class="clearfix">
+            <li class="w25">
+                <a href="javascript:;" class="foot-navbtn">
+                    <div class="icon-home icon"></div>
+                    <div>首页</div>
+                </a>
+            </li>
+            <li class="w25">
+                <a href="javascript:;" class="foot-navbtn">
+                    <div class="icon-heart icon"></div>
+                    <div>排行</div>
+                </a>
+            </li>
+            <li class="w25">
+                <a href="javascript:;" class="foot-navbtn current">
+                    <div class="icon-classify icon"></div>
+                    <div>分类</div>
+                </a>
+            </li>
+            <li class="w25">
+                <a href="javascript:;" class="foot-navbtn">
+                    <div class="icon-star icon"></div>
+                    <div>专题</div>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+</body>
+</html>
+
+<script src="js/slides.min.jquery.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<!--游戏图片懒加载 淡入-->
+<script>
+    $("img").lazyload({
+        threshold: 1000,
+        effect: "fadeIn"
+    });
+</script>
+
+

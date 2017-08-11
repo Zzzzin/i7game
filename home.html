@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head lang="cn">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="copyright" content="www.i7game.com">
+    <meta name="keywords" content="手游,HTML5游戏,HTML5GAME,i7game,mobile,html5">
+
+    <title>i7Game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="256x256" href="i7game.ico">
+
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/index.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+//        (function(){
+//            // deicePixelRatio ：设备像素
+//            var scale = 1 / devicePixelRatio;
+//            //设置meta 压缩界面 模拟设备的高分辨率
+//            document.querySelector('meta[name="viewport"]').setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+//        })();
+        function FontSize() {
+            var deviceWidth = document.documentElement.clientWidth > 1024 ? 640 : document.documentElement.clientWidth;
+            //按照640像素下字体为100px的标准来，得到一个字体缩放比例值 6.4
+            document.documentElement.style.fontSize = (deviceWidth / 6.4) + 'px';
+        }
+        FontSize();
+        $(window).on('resize', FontSize);
+    </script>
+</head>
+<body>
+<div class="w">
+    <!--头部固定-->
+    <header class="head fixed">
+        <a href="javascript:;" class="btn-side-open"><i>爱轻游</i></a>
+        <span class="btn-logo"></span>
+
+        <div class="btn-search-box">
+            <a href="javascript:;" class="btn-search"><i class="icon-search"></i>极品贪吃蛇</a>
+        </div>
+    </header>
+    <div class="headGap"></div>
+
+    <!--选择单机或在线-->
+    <nav class="choose-network">
+        <ul class="clearfix">
+            <li class="current">
+                <a href="javascript:;"><i class="icon-stand-alone"></i>单机游戏</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="black"><i class="icon-web-line"></i>在线游戏</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--图片轮播-->
+    <div class="">
+        <div class="slider-game" id="swiper-container">
+            <ul class="swiper-wrapper clearfix">
+                <li class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="image/ad_game1.png" alt=""/>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="image/ad_game2.png" alt=""/>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- 分页器 自动生成内部元素 -->
+            <div class="swiper-pagination">
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                <span class="swiper-pagination-bullet"></span>
+            </div>
+
+        </div>
+    </div>
+
+    <!--游戏大小包大小 选择-->
+    <div class="choose-game-size">
+        <ul class="clearfix">
+            <li>
+                <a href="javascript:;">
+                    <div class="img"></div>
+                    <div class="txt black">&lt;10M</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="img small"></div>
+                    <div class="txt black">10M-50M</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="img middle"></div>
+                    <div class="txt black">50M-100M</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="img large"></div>
+                    <div class="txt black">&gt;100M</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--专题、活动-->
+    <div class="special MarginTopGap">
+        <h3 class="txt">
+            <span class="mark">专题</span>
+            <strong>穿越次元之门，让我们破次元壁吧！</strong>
+        </h3>
+        <div class="special-pic">
+            <img src="image/ad_game1.png" alt=""/>
+        </div>
+        <div class="txt">
+            <div class="nowrap">活久见，水果姐姐万圣节竟然扮成希拉里！</div>
+        </div>
+    </div>
+
+    <!--推荐 单条游戏-->
+    <div class="MarginTopGap">
+        <ul class="game-list">
+            <li class="news">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="hot">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺
+                            <span class="mark-libao">礼包</span>
+                        </h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="sutra">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="first">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="news">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+        </ul>
+    </div>
+
+    <!--专题、活动-->
+    <div class="special MarginTopGap">
+        <h3 class="txt">
+            <span class="mark">专题</span>
+            <strong>穿越次元之门，让我们破次元壁吧！</strong>
+        </h3>
+        <div class="special-pic">
+            <img src="image/ad_game1.png" alt=""/>
+        </div>
+        <div class="txt">
+            <div class="nowrap">活久见，水果姐姐万圣节竟然扮成希拉里！</div>
+        </div>
+    </div>
+
+    <!--推荐 单条游戏-->
+    <div class="MarginTopGap">
+        <ul class="game-list">
+            <li class="news">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="hot">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺
+                            <span class="mark-libao">礼包</span>
+                        </h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="sutra">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="first">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+            <li class="news">
+                <a href="javascript:;" class="game-list-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="black">泡泡龙迪诺</h4>
+                        <div class="nowrap">
+                            <span class="bradius">休闲益智</span><span>1280次下载</span><span>26.08MB</span>
+                        </div>
+                        <div class="nowrap">
+                            泡泡龙迪诺是当下一个十分流行的弹珠游戏。
+                        </div>
+                    </div>
+                </a>
+                <button class="btn-download">下载</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- loading-->
+    <div class="loading">努力加载中...</div>
+
+    <!--底部固定-->
+    <div class="footGap"></div>
+    <div class="foot w">
+        <ul class="clearfix">
+            <li class="w25">
+                <a href="javascript:;" class="foot-navbtn current">
+                    <div class="icon-home icon"></div>
+                    <div>首页</div>
+                </a>
+            </li>
+            <li class="w25">
+                <a href="javascript:;" class="foot-navbtn">
+                    <div class="icon-heart icon"></div>
+                    <div>排行</div>
+                </a>
+            </li>
+            <li class="w25">
+                <a href="javascript:;" class="foot-navbtn">
+                    <div class="icon-classify icon"></div>
+                    <div>分类</div>
+                </a>
+            </li>
+            <li class="w25">
+                <a href="javascript:;" class="foot-navbtn">
+                    <div class="icon-star icon"></div>
+                    <div>专题</div>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+</body>
+</html>
+
+<script src="js/slides.min.jquery.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<!--游戏图片懒加载 淡入-->
+<script>
+    $("img").lazyload({
+        threshold: 1000,
+        effect: "fadeIn"
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        // 主页轮播图
+        var swiper = new Swiper('#swiper-container', {
+            // 如果需要分页器
+            pagination: '.swiper-pagination',
+//            nextButton: '.swiper-button-next',
+//            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            loop: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 2500,
+            // autoHeight: true, // 自适应高度
+
+            // 说明：当设置为false时，用户操作之后（swipes,arrow以及pagination 点击）autoplay不会被禁掉，用户操作之后每次都会重新启动autoplay。
+            autoplayDisableOnInteraction: false
+        });
+    })
+</script>

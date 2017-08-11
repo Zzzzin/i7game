@@ -1,0 +1,95 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    /*清除移动端默认的tap点击的高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+
+    /*设置我们所有的 宽度从border开始计算*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    color: #222;
+    background: #f7f7f7;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+input, button {
+    border: none;
+    outline-style: none;
+    vertical-align: middle;
+}
+
+ul, ol {
+    list-style: none; /*清除列表风格*/
+}
+
+/*防止多行文本框拖动*/
+textarea {
+    outline-style: none;
+    resize: none;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse; /*合并外边线*/
+}
+
+button {
+    background: transparent;
+    cursor: pointer;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+a, a:hover {
+    color: #666;
+    text-decoration: none;
+}
+
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+/*清除浮动*/
+.clearfix::before, .clearfix::after{
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+[class^="icon-"] {
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../image/icon.png") no-repeat;
+    background-size: 4rem;
+}

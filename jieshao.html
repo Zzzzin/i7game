@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head lang="cn">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="copyright" content="www.i7game.com">
+    <meta name="keywords" content="手游,HTML5游戏,HTML5GAME,i7game,mobile,html5">
+
+    <title>i7Game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="./i7game.ico"/>
+    <link rel="apple-touch-icon" sizes="256x256" href="i7game.ico">
+
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+    <link rel="stylesheet" href="style/index.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+        function FontSize() {
+            var deviceWidth = document.documentElement.clientWidth > 1024 ? 640 : document.documentElement.clientWidth;
+            //按照640像素下字体为100px的标准来，得到一个字体缩放比例值 6.4
+            document.documentElement.style.fontSize = (deviceWidth / 6.4) + 'px';
+        }
+        FontSize();
+        $(window).on('resize', FontSize);
+    </script>
+</head>
+<body>
+<div class="w">
+
+    <!--头部分类-->
+    <div class="title jieshao-title fixed">
+        <button class="f_left"><i class="icon-left"></i></button>
+        <button class="f_right"><i class="icon-search"></i></button>
+    </div>
+    <div class="titleGap"></div>
+
+    <!--顶、踩 图标logo-->
+    <div class="jieshao-head">
+        <ul class="clearfix">
+            <li>
+                <div class="canvabox">
+                    <canvas  width=200 height=200 id="good"></canvas>
+                </div>
+            </li>
+            <li>
+                <div class="jishao-logo">
+                    <img src="image/thum_1414553058.png"/>
+                </div>
+            </li>
+            <li>
+                <div class="canvabox">
+                    <canvas  width=200 height=200 id="bad"></canvas>
+                </div>
+            </li>
+        </ul>
+        <div class="jieshao-name">
+            <h4>侍魂ol</h4>
+            <div class="jieshao-name-small">
+                <span>1887万次下载</span>
+                <span>326.8M</span>
+                <span>动作冒险</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!--游戏内容截图轮播 --全屏图-->
+    <nav class="swiper-jieshao MarginTopGap">
+        <div class="slider-game" id="swiper-container3">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <img src="image/game_jieshao.png"/>
+                </li>
+                <li class="swiper-slide">
+                    <img src="image/game_jieshao.png"/>
+                </li>
+                <li class="swiper-slide">
+                    <img src="image/game_jieshao.png"/>
+                </li>
+                <li class="swiper-slide">
+                    <img src="image/game_jieshao.png"/>
+                </li>
+            </ul>
+
+            <!-- 分页器 自动生成内部元素 -->
+            <div class="swiper-pagination">
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                <span class="swiper-pagination-bullet"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!--礼包-->
+    <div class="jieshao-game MarginTopGap">
+        <h4>大礼包</h4>
+        <div class="jieshao-libao"><a href="javascript:;">《侍魂ol》圣诞节礼包</a></div>
+        <div class="jieshao-libao"><a href="javascript:;">《侍魂ol》国庆节礼包</a></div>
+        <div class="jieshao-libao"><a href="javascript:;">《侍魂ol》中秋节礼包</a></div>
+    </div>
+
+    <div class="jieshao-game MarginTopGap">
+        <h4>介绍</h4>
+        <div class="jieshao-recommend">
+            <div>
+                <span>版本：2.34.0</span>
+                <span>更新：2017-12-24</span>
+            </div>
+            <p style="overflow:hidden;">
+                由日本著名街机游戏开发商SNK正版授权的格斗卡牌手游《侍魂ol》火热集结中！
+                现在登录游戏官网预约测试资格，就能获赠豪华道具礼包，你还不快快行动？
+                现在登录游戏官网预约测试资格，就能获赠豪华道具礼包，你还不快快行动？
+            </p>
+            <div class="jieshao-recommend-more"></div>
+
+        </div>
+
+        <script>
+            // 介绍内容超过三行的部分隐藏 显示 ‘.jieshao-recommend-more’
+            (function(){
+                var font = parseInt(document.documentElement.style.fontSize);
+                var more = $('.jieshao-recommend-more');
+                var height = more.siblings('p').height();
+
+                if(height >= 1.18 * font){
+                    more.addClass('show').removeClass('hide').siblings('p').css('height','1.18rem');
+                    return false;
+                }
+                more.addClass('hide').removeClass('show');
+            })()
+
+        </script>
+    </div>
+
+    <div class="MarginTopGap">
+        <div class="search-title">同类游戏推荐</div>
+        <!--搜索推荐-->
+        <ul class="search-game clearfix">
+            <li>
+                <a href="javascript:;" class="search-game-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="nowrap">泡泡龙迪诺</h4>
+                    </div>
+                </a>
+                <button class="btn-download">查看</button>
+            </li>
+            <li>
+                <a href="javascript:;" class="search-game-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="nowrap">泡泡龙迪诺</h4>
+                    </div>
+                </a>
+                <button class="btn-download">查看</button>
+            </li>
+            <li>
+                <a href="javascript:;" class="search-game-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="nowrap">泡泡龙迪诺</h4>
+                    </div>
+                </a>
+                <button class="btn-download">查看</button>
+            </li>
+            <li>
+                <a href="javascript:;" class="search-game-content">
+                    <div class="imgbox">
+                        <img src="image/thum_1414553058.png" alt=""/>
+                    </div>
+                    <div class="txt">
+                        <h4 class="nowrap">泡泡龙迪诺</h4>
+                    </div>
+                </a>
+                <button class="btn-download">查看</button>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="jieshao-game MarginTopGap">
+        <h4>开发者</h4>
+        <div class="jieshao-author" style="color: #888">陌陌游戏</div>
+    </div>
+
+    <div style="padding-bottom: 1.05rem;"></div>
+    <div class="foot-jieshao w">
+        <button class="f_left"><i class="icon-shoucang"></i></button>
+        <button class="f_right"><i class="icon-share"></i></button>
+        <span class="jishao-download-box">
+            <button class="jishao-download">下载</button>
+        </span>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<script src="js/slides.min.jquery.js"></script>
+
+<script>
+    $(function(){
+        // 顶、踩 的canvas动画
+        (function(good,bad){
+            // 封装
+            function kanvas(opt) {
+                this._init(opt);
+            }
+            kanvas.prototype = {
+                _init : function(opt){
+                    this.txt = opt.txt;
+                    this.txtcolor = opt.txtcolor || '#ccc';
+                    this.img = opt.img;
+
+                    this.x0 = opt.x0;
+                    this.y0 = opt.y0;
+                    this.r = opt.r;
+                    this.sAngle = opt.sAngle * 2 * Math.PI || 0;
+                    this.eAngle = opt.eAngle * 2 * Math.PI || 0; // 传入 0.0 到 1.0 之间的小数
+                    this.lineWidth = opt.lineWidth || 1;
+                    this.strokeStyle = opt.strokeStyle || "#ccc";
+
+                },
+                // 绘制文字
+                drawtxt : function(ctx) {
+                    ctx.beginPath();
+                    ctx.font = '40px Arial';
+                    ctx.fillStyle = this.txtcolor;
+                    ctx.textAlign = 'center';
+                    ctx.fillText(this.txt, this.x0, this.y0 - 8);
+                },
+                // 绘制图片 顶、踩图标
+                drawimage : function(ctx,imgX,imgY) {
+                    ctx.beginPath();
+                    ctx.drawImage(this.img, imgX, imgY, 50, 44, this.x0 - 25, this.y0 + 8, 50, 44);
+                },
+                // 画圆
+                arc: function(ctx,col,endAgl) {
+                    endAgl = endAgl ? endAgl : this.eAngle; // 结束角度
+                    col = col ? col : this.strokeStyle; // 描边颜色  传参或默认
+                    var end = (1 - endAgl) * 2 * Math.PI || 2 * Math.PI;  // 下面计算为逆时针 从新计算结束位置
+
+                    ctx.beginPath();
+                    ctx.arc(this.x0, this.y0, this.r, this.sAngle - 1/2 * Math.PI, end - 1/2 * Math.PI, true);
+                    ctx.lineWidth = this.lineWidth;
+                    ctx.strokeStyle = col;
+                    ctx.stroke();
+                }
+
+            };
+
+            var canvas = document.querySelector('#good');
+            ctx =  canvas.getContext('2d');
+
+            var canvas2 = document.querySelector('#bad');
+            ctx2 =  canvas2.getContext('2d');
+
+
+            var image = new Image();
+            image.src = 'image/icon.png';
+            image.onload = function() {
+                var date = new Date();
+                var timer = setInterval(function(){
+                    var now = new Date(),
+                            num = now - date,
+                            goodAgl = good/(good+bad) * num / 3000,
+                            badAgl = bad/(good+bad) * num / 3000;
+
+                    if(num >= 3000) {
+                        goodAgl = good/(good+bad);
+                        badAgl = bad/(good+bad);
+                        clearInterval(timer);
+                    }
+
+                    drawgood(goodAgl);
+                    drawbad(badAgl);
+
+                }, 1000/30);
+
+            };
+
+            function drawgood(angle){
+                var kanva = new kanvas({
+                    txt : good,
+                    txtcolor : '#0088FF',
+                    img : image,
+
+                    x0 : 100,
+                    y0 : 100,
+                    r : 90,
+                    eAngle : 1,
+                    lineWidth : 10
+                });
+
+                kanva.drawtxt(ctx);
+                kanva.drawimage(ctx,76,400);
+                kanva.arc(ctx); // 灰色背景圆
+                kanva.arc(ctx,'#0088FF',angle); // 蓝色比例圆 传入比例
+
+            }
+
+            function drawbad(angle){
+                var kanva2 = new kanvas({
+                    txt : bad,
+                    txtcolor : '#F15C5C',
+                    img : image,
+
+                    x0 : 100,
+                    y0 : 100,
+                    r : 90,
+                    eAngle : 1,
+                    lineWidth : 10
+                });
+
+                kanva2.drawtxt(ctx2);
+                kanva2.drawimage(ctx2,146,400);
+                kanva2.arc(ctx2);
+                kanva2.arc(ctx2,'#F15C5C',angle);
+
+            }
+
+        })(90000,10000)
+    })
+</script>
+
+<script>
+    $(document).ready(function () {
+
+        // 游戏分类 滑动栏
+        new Swiper('#swiper-container3', {
+            pagination: '.swiper-pagination',  // 如果需要分页器
+            slidesPerView: 'auto',
+            paginationClickable: true,
+            observer:true,       // 检测子元素变化 动态初始化
+            observeParents:true, // 检测父元素变化 动态初始化
+            paginationClickable: true // 分页器控制切换
+        });
+
+        // 点击进入、退出全屏
+        $('#swiper-container3').on('click',function(){
+            $(this).toggleClass('fullscreen');
+        });
+
+        $('.jieshao-recommend-more').on('click', function(){
+            $(this).addClass('hide').removeClass('show').siblings('p').css('height','auto');
+        })
+
+    })
+
+</script>
